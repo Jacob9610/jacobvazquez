@@ -6,13 +6,13 @@ export default function Home() {
 
       <div className="mt-6 flex gap-4">
         <a
-          href="mailto:hello@jacobvazquez.com"
+          href="Vazquezjake@live.com"
           className="px-4 py-2 bg-black text-white rounded-lg"
         >
           Email
         </a>
         <a
-          href="https://github.com/"
+          href="https://github.com/Jacob9610"
           target="_blank"
           className="px-4 py-2 border rounded-lg"
         >
@@ -24,6 +24,13 @@ export default function Home() {
           className="px-4 py-2 border rounded-lg"
         >
           LinkedIn
+        </a>
+                <a
+          href="https://www.medium.com/"
+          target="_blank"
+          className="px-4 py-2 border rounded-lg"
+        >
+          Medium
         </a>
       </div>
     </main>
