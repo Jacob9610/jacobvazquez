@@ -1,38 +1,28 @@
-export default function Home() {
-  return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-zinc-50 text-zinc-900">
-      <h1 className="text-4xl font-bold">Jacob Vazquez</h1>
-      <p className="mt-3 text-lg text-zinc-600">Engineer • Builder • Tinkerer</p>
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import HomeHero from "@/components/sections/HomeHero";
 
-      <div className="mt-6 flex gap-4">
-        <a
-          href="Vazquezjake@live.com"
-          className="px-4 py-2 bg-black text-white rounded-lg"
-        >
-          Email
-        </a>
-        <a
-          href="https://github.com/Jacob9610"
-          target="_blank"
-          className="px-4 py-2 border rounded-lg"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-          className="px-4 py-2 border rounded-lg"
-        >
-          LinkedIn
-        </a>
-                <a
-          href="https://www.medium.com/"
-          target="_blank"
-          className="px-4 py-2 border rounded-lg"
-        >
-          Medium
-        </a>
-      </div>
-    </main>
+export default function HomePage() {
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <main>
+        <HomeHero />
+        {/* Placeholders for Phase 2/3 */}
+        <section id="projects-all" className="px-4 py-24 max-w-6xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-2">Projects</h2>
+          <p className="text-sm text-muted-foreground">Phase 2 will go here.</p>
+        </section>
+        <section id="about" className="px-4 py-24 max-w-6xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-2">About</h2>
+          <p className="text-sm text-muted-foreground">Short bio placeholder.</p>
+        </section>
+        <section id="contact" className="px-4 py-24 max-w-6xl mx-auto">
+          <h2 className="text-2xl font-semibold mb-2">Contact</h2>
+          <p className="text-sm text-muted-foreground">Form lands in Phase 3.</p>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
