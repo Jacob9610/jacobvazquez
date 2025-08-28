@@ -16,7 +16,9 @@ export async function getUpdates(): Promise<Update[]> {
   const [github, youtube, medium] = await Promise.all([
     fetchGitHub(process.env.GITHUB_USERNAME || ""),
     fetchYouTube(
-      process.env.YOUTUBE_CHANNEL_ID || ""),
+      process.env.YOUTUBE_CHANNEL_ID || "",
+      process.env.YOUTUBE_API_KEY || ""
+    ),
     fetchMedium(process.env.MEDIUM_USERNAME || ""),
   ]);
 

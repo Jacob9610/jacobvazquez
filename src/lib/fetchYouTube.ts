@@ -1,5 +1,4 @@
-export async function fetchYouTube(channelId: string) {
-  const apiKey = process.env.YOUTUBE_API_KEY; // ✅ comes from .env.local or Vercel
+export async function fetchYouTube(channelId: string, apiKey: string) {
   if (!channelId || !apiKey) return [];
 
   try {
@@ -7,13 +6,16 @@ export async function fetchYouTube(channelId: string) {
       `https://www.googleapis.com/youtube/v3/search?channelId=${channelId}&order=date&part=snippet&type=video&maxResults=5&key=${apiKey}`,
       { next: { revalidate: 3600 } }
     );
-    const data = await res.json();
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const data: any = await res.json();
 
     if (!data.items) {
       console.error("YouTube API error:", data);
       return [];
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return data.items.map((item: any) => ({
       id: item.id.videoId,
       source: "YouTube" as const,
