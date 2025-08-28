@@ -102,7 +102,7 @@ export default function Navbar() {
                     <Link href="/projects">All projects →</Link>
                   </div>
                 </div>
-                <Link href="/#about">About</Link>
+                <Link href="/about">About</Link>
                 <Link href="/#contact">Contact</Link>
               </div>
             </SheetContent>
