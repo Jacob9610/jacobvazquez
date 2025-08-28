@@ -58,6 +58,9 @@ export default function Navbar() {
           <Link href="/#about" className="text-sm text-muted-foreground hover:text-foreground">
             About
           </Link>
+          <Link href="/Updates" className="text-sm text-muted-foreground hover:text-foreground">
+            Updates
+          </Link>
           <Link href="/#contact" className="text-sm text-muted-foreground hover:text-foreground">
             Contact
           </Link>
