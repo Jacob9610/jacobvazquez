@@ -55,11 +55,11 @@ export default function Navbar() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Link href="/#about" className="text-sm text-muted-foreground hover:text-foreground">
-            About
-          </Link>
           <Link href="/updates" className="text-sm text-muted-foreground hover:text-foreground">
             Updates
+          </Link>
+          <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
+            About
           </Link>
           <Link href="/#contact" className="text-sm text-muted-foreground hover:text-foreground">
             Contact
@@ -102,6 +102,7 @@ export default function Navbar() {
                     <Link href="/projects">All projects →</Link>
                   </div>
                 </div>
+                <Link href="/updates">Updates</Link>
                 <Link href="/about">About</Link>
                 <Link href="/#contact">Contact</Link>
               </div>
