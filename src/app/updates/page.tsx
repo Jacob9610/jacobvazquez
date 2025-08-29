@@ -1,13 +1,9 @@
- import { getUpdates } from "@/lib/getUpdates";
-import UpdatesList from "@/components/updates/UpdatesList";
 
+import { getUpdates } from "@/lib/getUpdates";
+import UpdatesTabs from "@/components/updates/UpdatesTabs"; // <-- add this
+
+// Server component to fetch updates
 export default async function UpdatesPage() {
   const updates = await getUpdates();
-
-  return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold mb-6">Updates</h1>
-      <UpdatesList updates={updates} />
-    </main>
-  );
+  return <UpdatesTabs updates={updates} />;
 }
