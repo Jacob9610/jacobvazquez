@@ -61,6 +61,9 @@ export default function Navbar() {
           <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
             About
           </Link>
+          <Link href="/education" className="text-sm text-muted-foreground hover:text-foreground">
+            Education
+          </Link>
           <Link href="/#contact" className="text-sm text-muted-foreground hover:text-foreground">
             Contact
           </Link>
@@ -104,6 +107,7 @@ export default function Navbar() {
                 </div>
                 <Link href="/updates">Updates</Link>
                 <Link href="/about">About</Link>
+                <Link href="/education">Education</Link>
                 <Link href="/#contact">Contact</Link>
               </div>
             </SheetContent>
