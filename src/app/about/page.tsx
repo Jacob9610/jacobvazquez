@@ -1,6 +1,9 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ResumeCard from "@/components/ui/ResumeCard";
+import { experiences } from "@/data/experience";
 import Image from "next/image";
+import { skills } from "@/data/skills";
 
 export default function AboutPage() {
   return (
@@ -56,67 +59,14 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Skills Section */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-          <div className="grid sm:grid-cols-3 gap-6">
-            <div>
-              <h3 className="font-bold mb-2">Software</h3>
-              <ul className="space-y-1">
-                <li>C, C++, Java, JavaScript</li>
-                <li>Express, MySQL, Tailwind, React</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2">Hardware</h3>
-              <ul className="space-y-1">
-                <li>Raspberry Pi, Arduino</li>
-                <li>Motor Drivers, Sensors</li>
-                <li>3D Printing & Prototyping</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-2">Research</h3>
-              <ul className="space-y-1">
-                <li>Microscopy Automation</li>
-                <li>Image Analysis & Data Collection</li>
-                <li>Scientific Writing</li>
-              </ul>
-            </div>
-          </div>
-        </section>
 
         {/* Roles Section */}
         <section>
-          <h2 className="text-2xl font-semibold mb-6">Roles</h2>
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-              <h3 className="font-bold">President, BitBots</h3>
-              <p className="text-sm mt-2">
-                Built a hardware club into a hub for student projects and
-                mentoring.
-              </p>
-            </div>
-            <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-              <h3 className="font-bold">VP, 3D Printing & Design Club</h3>
-              <p className="text-sm mt-2">
-                Guided students in fabrication and prototyping with 3D printing.
-              </p>
-            </div>
-            <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-              <h3 className="font-bold">Researcher, Esquerra Lab</h3>
-              <p className="text-sm mt-2">
-                Developed RoboCam and microscopy tools to study{" "}
-                <em>Stentor</em>.
-              </p>
-            </div>
-            <div className="p-6 border rounded-xl shadow-sm hover:shadow-md transition">
-              <h3 className="font-bold">Mentor, CCC Summer Course</h3>
-              <p className="text-sm mt-2">
-                Taught robotics and microscopy to K–12 students in community
-                workshops.
-              </p>
-            </div>
+          <div className="space-y-6">
+            {experiences.slice(0, 3).map((exp) => (
+              <ResumeCard key={exp.id} role={exp.role} org={exp.org} bullets={exp.bullets}  date={exp.date}  />
+            ))}
+
           </div>
 
           {/* Resume link */}
@@ -131,6 +81,28 @@ export default function AboutPage() {
             </a>
           </div>
         </section>
+
+
+       <section>
+        <div className="grid sm:grid-cols-2 gap-6">
+          {skills.map((group) => (
+            <div key={group.category}>
+              <h3 className="font-semibold mb-2">{group.category}</h3>
+              <ul className="flex flex-wrap gap-2 text-sm">
+                {group.items.map((item, i) => (
+                  <li
+                    key={i}
+                    className="px-2 py-1 border rounded-md text-muted-foreground"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
 
         {/* Photos Section */}
         <section>
