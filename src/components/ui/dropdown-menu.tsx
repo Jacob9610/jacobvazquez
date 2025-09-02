@@ -19,17 +19,18 @@ function DropdownMenuPortal({
     <DropdownMenuPrimitive.Portal data-slot="dropdown-menu-portal" {...props} />
   )
 }
-
-function DropdownMenuTrigger({
-  ...props
-}: React.ComponentProps<typeof DropdownMenuPrimitive.Trigger>) {
+function DropdownMenuTrigger(
+  props: React.ComponentProps<typeof DropdownMenuPrimitive.Trigger>
+) {
   return (
     <DropdownMenuPrimitive.Trigger
+      suppressHydrationWarning
       data-slot="dropdown-menu-trigger"
       {...props}
     />
   )
 }
+
 
 function DropdownMenuContent({
   className,

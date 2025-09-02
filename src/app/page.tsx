@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HomeHero from "@/components/sections/HomeHero";
+import ContactTabs from "@/components/contact/ContactTabs";
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
@@ -47,8 +48,8 @@ export default function HomePage() {
           <p className="text-sm text-muted-foreground">Short bio placeholder.</p>
         </section>
         <section id="contact" className="px-4 py-24 max-w-6xl mx-auto">
-          <h2 className="text-2xl font-semibold mb-2">Contact</h2>
-          <p className="text-sm text-muted-foreground">Form lands in Phase 3.</p>
+          <h2 className="text-2xl font-semibold mb-8 text-center">Lets Connect!</h2>
+          <ContactTabs />
         </section>
       </main>
       <Footer />

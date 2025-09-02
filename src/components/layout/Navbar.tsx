@@ -64,7 +64,7 @@ export default function Navbar() {
            <Link href="/resume" className="text-sm text-muted-foreground hover:text-foreground">
             Resume
           </Link>
-          <Link href="/#contact" className="text-sm text-muted-foreground hover:text-foreground">
+          <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
             Contact
           </Link>
         </div>
@@ -108,7 +108,7 @@ export default function Navbar() {
                 <Link href="/about">About</Link>
                 {/* <Link href="/education">Education</Link> */}
                 <Link href="/resume">Resume</Link>
-                <Link href="/#contact">Contact</Link>
+                <Link href="/contact">Contact</Link>
               </div>
             </SheetContent>
           </Sheet>
