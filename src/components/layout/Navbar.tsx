@@ -1,16 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, ChevronDown, Menu } from "lucide-react";
+import { Github, Linkedin, Mail, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import {
   Sheet,
   SheetContent,
@@ -30,30 +22,12 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden items-center gap-6 md:flex">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-sm text-muted-foreground transition hover:text-foreground">
-              Projects <ChevronDown className="h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-56">
-              <DropdownMenuLabel>Featured</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem asChild>
-                <Link href="/projects/flyshock">FlyShock</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/projects/robocam">RoboCam</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/projects/line-racer">Line Racer</Link>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem asChild>
-                <Link href="/projects">All projects →</Link>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+
+          <Link href="/projects" className="text-sm text-muted-foreground hover:text-foreground">
+          Projects
+          </Link>
           <Link href="/updates" className="text-sm text-muted-foreground hover:text-foreground">
-            Updates
+            Feeds
           </Link>
           <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground">
             About
@@ -64,7 +38,7 @@ export default function Navbar() {
            <Link href="/resume" className="text-sm text-muted-foreground hover:text-foreground">
             Resume
           </Link>
-          <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
+          <Link href="/#contact" className="text-sm text-muted-foreground hover:text-foreground">
             Contact
           </Link>
         </div>
@@ -95,20 +69,13 @@ export default function Navbar() {
                 <SheetTitle>Menu</SheetTitle>
               </SheetHeader>
               <div className="mt-4 flex flex-col gap-4">
-                <div>
-                  <div className="mb-2 text-xs font-medium text-muted-foreground">Projects</div>
-                  <div className="flex flex-col gap-2 pl-2 text-sm">
-                    <Link href="/projects/flyshock">FlyShock</Link>
-                    <Link href="/projects/robocam">RoboCam</Link>
-                    <Link href="/projects/line-racer">Line Racer</Link>
-                    <Link href="/projects">All projects →</Link>
-                  </div>
-                </div>
-                <Link href="/updates">Updates</Link>
+              
+                <Link href="/projects">Projects →</Link>
+                <Link href="/updates">Feeds</Link>
                 <Link href="/about">About</Link>
                 {/* <Link href="/education">Education</Link> */}
                 <Link href="/resume">Resume</Link>
-                <Link href="/contact">Contact</Link>
+                <Link href="/#contact">Contact</Link>
               </div>
             </SheetContent>
           </Sheet>

@@ -4,6 +4,7 @@ import ResumeCard from "@/components/ui/ResumeCard";
 import { experiences } from "@/data/experience";
 import Image from "next/image";
 import { skills } from "@/data/skills";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -71,14 +72,7 @@ export default function AboutPage() {
 
           {/* Resume link */}
           <div className="mt-8 text-center">
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition"
-            >
-              View Full Resume
-            </a>
+            <Link href="/resume">Resume</Link>
           </div>
         </section>
 
