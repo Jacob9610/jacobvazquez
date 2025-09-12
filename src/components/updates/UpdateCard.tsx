@@ -1,4 +1,5 @@
  import { Update } from "@/lib/getUpdates";
+ import Image from "next/image";
 
 export default function UpdateCard({ update }: { update: Update }) {
   return (
@@ -14,11 +15,7 @@ export default function UpdateCard({ update }: { update: Update }) {
         <p className="text-sm mt-1 line-clamp-3">{update.description}</p>
       )}
       {update.media?.src && (
-        <img
-          src={update.media.src}
-          alt={update.title}
-          className="mt-2 rounded-md"
-        />
+        <Image src={""} alt={update.title} width={600} height={315} className="w-full h-auto rounded-md" />
       )}
       <p className="text-xs text-muted-foreground mt-2">
         {new Date(update.date).toLocaleDateString()}

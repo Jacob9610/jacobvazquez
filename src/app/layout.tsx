@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Jacob Vazquez — Portfolio",
     description:
       "Explore my projects, research, and hardware/software experiments.",
-    images: ["/images/og-image.png"],
+    images: ["/images/layout-images/og-image.png"],
     creator: "@yourTwitterHandle", // optional
   },
   themeColor: "#0f172a",

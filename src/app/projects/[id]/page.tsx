@@ -28,7 +28,7 @@ export default async function ProjectDetailPage({
       <Navbar />
     <main className="px-6 py-12 max-w-5xl mx-auto space-y-12">
       <ProjectHeader title={project.title} tagline={project.tagline} />
-      <ProjectCarousel images={project.images} />
+      <ProjectCarousel images={project.images} title={project.title} />
       <ProjectDescription description={project.description} />
       <ProjectVideo video={project.video} />
       <ProjectMeta roles={project.roles} tools={project.tools} />

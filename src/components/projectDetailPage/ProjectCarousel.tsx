@@ -1,14 +1,27 @@
-function ProjectCarousel({ images }: { images: string[] }) {
+import Image from "next/image";
+
+type Props = {
+  images: string[];   // e.g. project.images
+  title: string;      // e.g. project.title (for alt text)
+};
+
+export default function ProjectCarousel({ images = [], title }: Props) {
+  if (!images.length) return null;
+
   return (
-    <div className="mb-10">
-      {/* Replace with Embla or shadcn carousel */}
-      <div className="flex overflow-x-scroll gap-4">
-        {images.map((src, i) => (
-          <img key={i} src={src} alt={`Project image ${i+1}`} className="rounded-2xl w-full max-w-lg object-cover" />
-        ))}
-      </div>
+    <div className="flex gap-4 overflow-x-auto snap-x">
+      {images.map((src, idx) => (
+        <div key={`${src}-${idx}`} className="shrink-0 w-[320px] snap-start">
+          <Image
+            src={src}
+            alt={`${title} image ${idx + 1}`}
+            width={1280}
+            height={720}
+            className="w-full h-auto rounded-lg object-cover"
+            priority={idx === 0}
+          />
+        </div>
+      ))}
     </div>
   );
 }
-
-export default ProjectCarousel;
