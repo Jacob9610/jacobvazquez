@@ -44,7 +44,7 @@ export default function AboutPage() {
               Right now, my work revolves around research in the{" "}
               <strong>Esquerra Lab</strong>, where I helped develop projects
               like <strong>RoboCam</strong> and automated microscopy systems for
-              studying organisms like <em>Stentor</em>. I’ve also led projects
+              studying organisms like <Link  href="https://en.wikipedia.org/wiki/Stentor_(ciliate) " ><em>Stentor</em></Link>. I’ve also led projects
               like <strong>FlyShock</strong> and taught robotics in community
               courses. All of these experiences keep me sharp across coding,
               hardware integration, and research workflows.

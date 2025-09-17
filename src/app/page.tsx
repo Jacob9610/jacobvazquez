@@ -36,7 +36,7 @@ export default async function HomePage() {
               >
                 <div className="relative h-40 w-full">
                   <Image
-                    src={project.images[0] || "/placeholder.png"}
+                    src={project.images[0] || "/images/Projects/RoboCam/StentorCam/IMG_0268"}
                     alt={project.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform"
@@ -79,7 +79,7 @@ export default async function HomePage() {
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             <div className="p-6 border rounded-xl shadow-sm">
-              <h3 className="text-3xl font-bold">10+</h3>
+              <h3 className="text-3xl font-bold">8+</h3>
               <p className="text-sm text-muted-foreground">Projects</p>
             </div>
             <div className="p-6 border rounded-xl shadow-sm">
@@ -91,7 +91,7 @@ export default async function HomePage() {
               <p className="text-sm text-muted-foreground">Leadership Roles</p>
             </div>
             <div className="p-6 border rounded-xl shadow-sm">
-              <h3 className="text-3xl font-bold">2</h3>
+              <h3 className="text-3xl font-bold">1</h3>
               <p className="text-sm text-muted-foreground">Research Labs</p>
             </div>
           </div>
@@ -104,12 +104,12 @@ export default async function HomePage() {
           </h2>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
             <blockquote className="p-6 border rounded-xl bg-background shadow-sm">
-              <p>&quot;Jacob’s dedication and leadership at BitBots transformed the club into a hub for innovation.&quot;</p>
-              <footer className="mt-2 text-sm text-muted-foreground">— Connie, Teammate</footer>
+              <p>&quot;Working with Jacob on Bit-Bots helped broaden the way that I think about embedded systems, with it being something that could not only help other people learn, but how to build a community surrounding a common interest&quot;</p>
+              <footer className="mt-2 text-sm text-muted-foreground">— Connie, Bit-Bot VP</footer>
             </blockquote>
             <blockquote className="p-6 border rounded-xl bg-background shadow-sm">
               <p>&quot;A strong collaborator with both technical and creative skills.&quot;</p>
-              <footer className="mt-2 text-sm text-muted-foreground">— Emiliano, Research Partner</footer>
+              <footer className="mt-2 text-sm text-muted-foreground">— Emiliano, Bit-Bots VP  </footer>
             </blockquote>
           </div>
         </section>
@@ -183,12 +183,13 @@ export default async function HomePage() {
 
     {/* Image placeholder */}
     <div className="relative h-64 w-full rounded-xl overflow-hidden shadow-md">
-      <Image
-        src="/images/headshot.jpg" // swap with your real headshot or lab photo
-        alt="Jacob Vazquez"
-        fill
-        className="object-cover"
-      />
+    <Image
+  src="/images/MyPhotos/graduationMom.JPG"
+  alt="Jacob Vazquez"
+  fill
+  className="object-cover"
+/>
+
     </div>
   </div>
 </section>

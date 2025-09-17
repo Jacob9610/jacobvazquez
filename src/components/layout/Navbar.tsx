@@ -45,7 +45,7 @@ export default function Navbar() {
 
         {/* Socials (desktop) */}
         <div className="hidden items-center gap-3 md:flex">
-          <a href="https://https://github.com/Jacob9610" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <a href="https://github.com/Jacob9610" target="_blank" rel="noreferrer" aria-label="GitHub">
             <Github className="h-5 w-5" />
           </a>
           <a href="https://www.linkedin.com/in/jacob-vazquez-831460270/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
