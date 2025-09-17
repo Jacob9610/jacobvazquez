@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Line Racer",
     tagline: "PID-controlled autonomous car with IR tracking.",
     categories: ["Hardware", "Software"],
-    images: ["/images/Projects/line-racer/Biermain.JPG"],
+    images: ["/images/Projects/line-racer/Biermain.jpg"],
     description: "Line Racer uses a Raspberry Pi with a 5-channel IR sensor array to follow lines while adjusting motor speed with PID control. Ultrasonic sensors are added for obstacle detection.",
     learnings: ["Implemented PID control", "Threading in C", "Sensor integration"],
     roles: ["Firmware Developer"],
