@@ -49,7 +49,7 @@ export const projects: Project[] = [
     learnings: ["Serial communication", "Python hardware control", "Research data workflows"],
     roles: ["Researcher", "System Engineer"],
     tools: ["Raspberry Pi", "Python", "3D Printer"],
-    links: { github: "https://github.com/example/robocam" }
+    links: { github: "https://github.com/screamuch/RoboCam" }
   },
   {
     id: "cyber-stacker",
